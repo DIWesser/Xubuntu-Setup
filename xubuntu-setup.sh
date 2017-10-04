@@ -221,9 +221,12 @@ echo "- [ ] Install [AESCrypt](https://www.aescrypt.com/download/)" >> 'Post Ins
 echo "- [ ] Install [jGRASP](http://spider.eng.auburn.edu/user-cgi/grasp/grasp.pl?;dl=download_jgrasp.html)" >> 'Post Install Todo.md'
 echo "- [ ] Walnut street printer set up based on [this Ubuntu forums thread](https://ubuntuforums.org/showthread.php?t=2350001)." >> 'Post Install Todo.md'
 
+#########################################################################
+# Finishing Touches
+#########################################################################
+
 # Remove unneeded dependencies
 apt autoclean
 apt autoremove
 
-# And now we turn it off and on again.
-reboot
+reboot # And now we turn it off and on again.

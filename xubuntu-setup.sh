@@ -58,11 +58,11 @@ apt update # Update repository and app lists
     apt install -y calibre
     apt install -y compton # Display compositor. Helps deal with screen tearing problems.
     apt install -y eclipse # IDE (Java, etc)
-    apt install -y git
+    apt install -y git # If you don't know what this is, don't install it.
     apt install -y gnome-disk-utility
     apt install -y gscan2pdf # Scanning program with OCR. It's a bit grumpy.
     apt install -y htop # CLI activity monitoring.
-    apt install -y inkscape
+    apt install -y inkscape # Vector graphics editor
     apt install -y libdvd-pkg
     apt install -y libreoffice-impress
     apt install -y lsb-core # Needed for jGRASP

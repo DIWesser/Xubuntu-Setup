@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Check if run as root
-    if [ $UID -ne 0 ] ; then
+    if [ "$UID" -ne "0" ] ; then # Actual check
         echo "This script must be run as root. (Use sudo.)"
         exit 1
     fi
@@ -10,8 +10,7 @@
 # Prep
 #########################################################################
 
-# Send stray files to Desktop
-cd Desktop
+cd Desktop # Send stray files to Desktop
 
 # Update everything before we begin
 apt update
@@ -21,8 +20,7 @@ apt upgrade
 # System Settings
 #########################################################################
 
-# Change timezone to UTC
-timedatectl set-timezone Etc/UTC
+timedatectl set-timezone Etc/UTC # Change timezone to UTC
 
 #########################################################################
 # Installing Things

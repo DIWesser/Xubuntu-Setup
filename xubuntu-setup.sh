@@ -92,66 +92,22 @@ snap install keepassxc
 apt remove libreoffice-draw
 
 # Non-repo programs
+    # Chrome
+        chmod +x resources/install-chrome.sh
+        ./resources/install-chrome.sh
+    # Franz
+        chmod +x resources.install-franz.sh
+        ./resources.install-franz.sh
+    # Extra Typora Themes
+        chmod +x resources/install-typora-themes.sh
+        ./resources/install-typora-themes.sh
+    # surge.sh
+        npm install --global surge
 
-## Install Chrome
-    sudo apt install libxss1 libappindicator1 libindicator7 # Install Dependencies (Already included in 16.04)
-    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb # Download Chrome
-    dpkg -i google-chrome*.deb && apt-get install -f # Unpack Chrome and Install
-    rm google-chrome-stable_current_amd64.deb # Remove .deb file
-
-## Install Franz
-    ###Create and enter working folder to contain mess
-    mkdir franz-install-files
-    cd franz-install-files
-
-    wget --output-document=franz.tgz https://github.com/meetfranz/franz-app/releases/download/4.0.4/Franz-linux-x64-4.0.4.tgz # Download Franz application bundle
-    mkdir /opt/franz # Create installation location
-    tar -xf franz.tgz -C /opt/franz # Extract Franz bundle to installation location
-    wget --output-document=franz-icon.png "https://cdn-images-1.medium.com/max/360/1*v86tTomtFZIdqzMNpvwIZw.png" # Download icon
-    cp franz-icon.png /opt/franz/ # Move icon to install location
-
-    ### Create *.desktop file (Allows app launchers etc to detect Franz)
-        touch /usr/share/applications/franz.desktop
-        echo "[Desktop Entry]" >> /usr/share/applications/franz.desktop
-        echo "Name=Franz" >> /usr/share/applications/franz.desktop
-        echo "Comment=" >> /usr/share/applications/franz.desktop
-        echo "Exec=/opt/franz/Franz" >> /usr/share/applications/franz.desktop
-        echo "Icon=/opt/franz/franz-icon.png" >> /usr/share/applications/franz.desktop
-        echo "Terminal=false" >> /usr/share/applications/franz.desktop
-        echo "Type=Application" >> /usr/share/applications/franz.desktop
-        echo "Categories=Messaging,Internet" >> /usr/share/applications/franz.desktop
-
-    ### Clean up
-        cd ..
-        rm -rf franz-install-files
-
-# Install surge.sh
-    npm install --global surge
-
-#########################################################################
-# Printer Setup
-#########################################################################
-
-# Install Canon MX470 series Drivers
-# The following script is based off of advice from a thread in the Linux Mint Forum (https://forums.linuxmint.com/viewtopic.php?t=165407)
-
-## Canon MX470 Drivers
-    wget --output-document=cnijfilter-mx470series-4.10-1-deb.tar.gz "http://pdisp01.c-wss.com/gdl/WWUFORedirectTarget.do?id=MDEwMDAwNTg2OTAx&amp;cmp=ACB&amp;lang=EN" # Download Installer Bundle
-    tar -zxvf cnijfilter-mx470series-4.10-1-deb.tar.gz # Unzip Installer Bundle
-    cd cnijfilter-mx470series-4.10-1-deb # Change working directory to installer folder
-    ./install.sh # Run Installer
-    cd .. # Back out of Installer Folder
-    rm -rf cnijfilter-mx470series-4.10-1-deb # Remove Installer Folder and Bundle
-    rm cnijfilter-mx470series-4.10-1-deb.tar.gz # Remove Installer Folder and Bundle
-
-## Scanning
-    wget --output-document=scangearmp-mx470series-2.30-1-deb.tar.gz "http://pdisp01.c-wss.com/gdl/WWUFORedirectTarget.do?id=MDEwMDAwNTg3MTAx&amp;cmp=ACB&amp;lang=EN" # Download Installer Bundle
-    tar -zxvf scangearmp-mx470series-2.30-1-deb.tar.gz # Unzip Installer Bundle
-    cd scangearmp-mx470series-2.30-1-deb # Change Working Directory to Installer Folder
-    ./install.sh # Run Installer
-    cd .. # Back Out of Installer Folder
-    rm -rf scangearmp-mx470series-2.30-1-deb # Remove Installer folder
-    rm scangearmp-mx470series-2.30-1-deb.tar.gz # Remove Installer Bundle
+# Printer Drivers
+    # Canon MX470
+        chmod +x resources/canon-mx470-setup.sh
+        ./resources/canon-mx470-setup.sh
 
 #########################################################################
 # Styling
@@ -197,31 +153,15 @@ apt remove libreoffice-draw
 # Misc. Settings
 #########################################################################
 
-# Have git cach cridentials in RAM for an hour
+# Have git cache credentials in RAM for an hour
 git config --global credential.helper "cache --timeout=3600"
-
-#########################################################################
-# Print user action notes
-#########################################################################
-
-# !!! Get this working !!!
-# echo "foo" >> 'Post Install Todo.md'
-
-echo "- [ ] Switch Window Manager theme to Numix" >> 'Post Install Todo.md'
-echo "- [ ] switch compositor to compton" >> 'Post Install Todo.md'
-echo "- [ ] Change LightDM settings" >> 'Post Install Todo.md'
-echo "- [ ] [Scroll a background window without shifting focus on it](https://wiki.archlinux.org/index.php/xfce#Scroll_a_background_window_without_shifting_focus_on_it)" >> 'Post Install Todo.md'
-echo "- [ ] Install Dropbox" >> 'Post Install Todo.md'
-echo "      - [ ] [Fix Dropbox](https://askubuntu.com/questions/732816/xubuntu-dropbox-icon-fail)" >> 'Post Install Todo.md'
-echo "- [ ] Record your encryption passphrase" >> 'Post Install Todo.md'
-echo "- [ ] Look over the Arch Wiki page on XFCE if you have time to play with theming" >> 'Post Install Todo.md'
-echo "- [ ] Install [AESCrypt](https://www.aescrypt.com/download/)" >> 'Post Install Todo.md'
-echo "- [ ] Install [jGRASP](http://spider.eng.auburn.edu/user-cgi/grasp/grasp.pl?;dl=download_jgrasp.html)" >> 'Post Install Todo.md'
-echo "- [ ] Walnut street printer set up based on [this Ubuntu forums thread](https://ubuntuforums.org/showthread.php?t=2350001)." >> 'Post Install Todo.md'
 
 #########################################################################
 # Finishing Touches
 #########################################################################
+
+# Print user action notes
+cp resourses/post-install-todo.md ~/Desktop/Readme.md
 
 # Remove unneeded dependencies
 apt autoclean

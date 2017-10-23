@@ -9,5 +9,5 @@ There are still a few things the you need to do manually after running the start
 - [ ] Record your encryption passphrase
 - [ ] Look over the Arch Wiki page on XFCE if you have time to play with theming
 - [ ] Install [AESCrypt](https://www.aescrypt.com/download/)
-- [ ] ~~Install [jGRASP](http://spider.eng.auburn.edu/user-cgi/grasp/grasp.pl?;dl=download_jgrasp.html)~~ Actually, don't. You're better off using a terminal than this program.
+- [ ] ~~Install [jGRASP](http://spider.eng.auburn.edu/user-cgi/grasp/grasp.pl?;dl=download_jgrasp.html)~~ Actually, don't.
 - [ ] Walnut street printer set up based on [this Ubuntu forums thread](https://ubuntuforums.org/showthread.php?t=2350001).

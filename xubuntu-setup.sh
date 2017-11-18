@@ -14,7 +14,7 @@ cd Desktop # Send stray files to Desktop
 
 # Update everything before we begin
 apt update
-apt upgrade
+apt upgrade -y
 
 #########################################################################
 # System Settings
@@ -54,7 +54,7 @@ apt update # Update repository and app lists
     apt install -y abcde # CLI CD ripper
     apt install -y albert # Launcher simular to macOS Spotlight
     apt install -y calibre
-    apt install -y compton # Display compositor. Helps deal with screen tearing problems.
+    apt install -y compton # Display compositor. Reduces screen tearing problems.
     apt install -y eclipse # IDE (Java, etc)
     apt install -y git # If you don't know what this is, don't install it.
     apt install -y gnome-disk-utility

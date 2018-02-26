@@ -30,15 +30,18 @@ timedatectl set-timezone Etc/UTC # Change timezone to UTC
 
 ## Add Repositories
    # Typora
-       apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE # Typora repo signing keys
-       add-apt-repository -y 'deb https://typora.io ./linux/' # Typora repo
-    #add-apt-repository -y ppa:elementary-os/stable # Geary and/or Pantheon Files
-    #add-apt-repository -y ppa:elementary-os/daily # Pantheon Files Dropbox plugin
-    add-apt-repository -y ppa:flexiondotorg/albert # Albert launcher
-    add-apt-repository -y ppa:snwh/pulp # Paper GTK and icon themes
-    add-apt-repository -y ppa:neovim-ppa/stable # Neovim
-    #add-apt-repository ppa:jeffreyratcliffe/ppa # More up to date version of gscan2pdf (It's Grumpy though.)
-    add-apt-repository ppa:webupd8team/java # Java 8 JDK installer
+       # Signing keys
+       apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
+       # Repository
+       add-apt-repository -y 'deb https://typora.io ./linux/'
+    #add-apt-repository -y ppa:elementary-os/stable  # Geary and Pantheon Files
+    #add-apt-repository -y ppa:elementary-os/daily   # Pantheon Files Dropbox plugin
+    add-apt-repository -y ppa:flexiondotorg/albert   # Albert launcher
+    add-apt-repository -y ppa:snwh/pulp              # Paper GTK and icon themes
+    add-apt-repository -y ppa:neovim-ppa/stable      # Neovim
+    #add-apt-repository -y ppa:jeffreyratcliffe/ppa   # More up to date version of gscan2pdf (It's Grumpy though.)
+    add-apt-repository -y ppa:webupd8team/java       # Java 8 JDK installer
+    add-apt-repository -y ppa:phoerious/keepassxc    # KeePassXC
 
 apt update # Update repository and app lists
 
@@ -51,21 +54,22 @@ apt update # Update repository and app lists
     apt remove xfce4-notes
 
 ## Install apps
-    apt install -y abcde # CLI CD ripper
-    apt install -y albert # Launcher simular to macOS Spotlight
+    apt install -y abcde      # CLI CD ripper
+    apt install -y albert     # Launcher simular to macOS Spotlight
     apt install -y calibre
-    apt install -y compton # Display compositor. Reduces screen tearing problems.
-    apt install -y eclipse # IDE (Java, etc)
-    apt install -y git # If you don't know what this is, don't install it.
+    apt install -y compton    # Display compositor. Reduces screen tearing problems.
+    #apt install -y eclipse    # IDE (Java, etc)
+    apt install -y git        # If you don't know what this is, don't install it.
     apt install -y gnome-disk-utility
-    apt install -y gscan2pdf # Scanning program with OCR. It's a bit grumpy.
-    apt install -y htop # CLI activity monitoring.
-    apt install -y inkscape # Vector graphics editor
+    apt install -y gscan2pdf  # Scanning program with OCR. It's a bit grumpy.
+    apt install -y htop       # CLI activity monitoring.
+    apt install -y inkscape   # Vector graphics editor
+    apt install -y keepassxc  # Password manager
     apt install -y libdvd-pkg
     apt install -y libreoffice-impress
-    apt install -y lsb-core # Needed for jGRASP
-    apt install -y nautilus # File manager that plays better with Dropbox.
-                            # However, Thunar and Dropbox have been getting along lately.
+    apt install -y lsb-core   # Needed for jGRASP
+    apt install -y nautilus   # File manager that plays better with Dropbox.
+                              # However, Thunar and Dropbox have been working
     apt install -y neovim
     apt install -y nmap
     #apt install -y npm
@@ -83,10 +87,8 @@ apt update # Update repository and app lists
     apt install -y tree
     apt install -y typora # Markdown editor
     apt install -y ubuntu-restricted-extras
-    apt install -y vim
+    #apt install -y vim
     apt install -y vlc
-
-snap install keepassxc
 
 ## Remove things that may have been added that you don't want
 apt remove libreoffice-draw
@@ -123,13 +125,16 @@ apt remove libreoffice-draw
 ## Set Panel Autohide Time
     echo "style "xfce-panel-window-style"" >> "~/.gtkrc-2.0"
     echo "{" >> "~/.gtkrc-2.0"
-    echo "  # Time in miliseconds before the panel will unhide on an enter event" >> "~/.gtkrc-2.0"
+    echo "  # Time in miliseconds before the panel will unhide on an enter event" \
+        >> "~/.gtkrc-2.0"
     echo "  XfcePanelWindow::popup-delay = 1" >> "~/.gtkrc-2.0"
     echo " " >> "~/.gtkrc-2.0"
-    echo "  # Time in miliseconds before the panel will hide on a leave event" >> "~/.gtkrc-2.0"
+    echo "  # Time in miliseconds before the panel will hide on a leave event" \
+        >> "~/.gtkrc-2.0"
     echo "  XfcePanelWindow::popdown-delay = 1" >> "~/.gtkrc-2.0"
     echo "}" >> "~/.gtkrc-2.0"
-    echo "class "XfcePanelWindow" style "xfce-panel-window-style"" >> "~/.gtkrc-2.0"
+    echo "class "XfcePanelWindow" style "xfce-panel-window-style"" >> \
+        "~/.gtkrc-2.0"
 
 #########################################################################
 # UI Settings

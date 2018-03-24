@@ -55,40 +55,44 @@ apt update # Update repository and app lists
 
 ## Install apps
     apt install -y abcde      # CLI CD ripper
-    apt install -y albert     # Launcher simular to macOS Spotlight
-    apt install -y calibre
-    apt install -y compton    # Display compositor. Reduces screen tearing problems.
+    apt install -y albert     # Launcher simular to macOS's Spotlight
+    #apt install -y calibre    # Ebook manager (Repo version is outdated)
+    apt install -y compton    # Display compositor. Fixes Xubuntu screen tearing
     #apt install -y eclipse    # IDE (Java, etc)
+    apt install -y festival   # Text to speach
     apt install -y git        # If you don't know what this is, don't install it.
     apt install -y gnome-disk-utility
     apt install -y gscan2pdf  # Scanning program with OCR. It's a bit grumpy.
     apt install -y htop       # CLI activity monitoring.
     apt install -y inkscape   # Vector graphics editor
     apt install -y keepassxc  # Password manager
+    apt install -y krita      # Drawing app
     apt install -y libdvd-pkg
     apt install -y libreoffice-impress
     apt install -y lsb-core   # Needed for jGRASP
-    apt install -y nautilus   # File manager that plays better with Dropbox.
-                              # However, Thunar and Dropbox have been working
-    apt install -y neovim
+    #apt install -y nautilus   # File manager that plays better with Dropbox.
+    #                          # However, Thunar and Dropbox have been working
+    apt install -y neovim     # CLI text editor
     apt install -y nmap
     #apt install -y npm
-    apt install -y ntp
+    apt install -y ntp        # Network Time Protocol
     apt install -y oracle-java8-installer # Java 8 runtime and JDK
     apt install -y oracle-java8-set-default
-    apt install -y pandoc
+    apt install -y pandoc     # Document converter
     apt install -y paper-gtk-theme
     apt install -y paper-icon-theme
-    apt install -y ranger # Command line file manager with Vim bindings
-    apt install -y redshift # 
+    apt install -y ranger     # Command line file manager with Vim bindings
+    apt install -y redshift   # 
     apt install -y screenfetch
-    apt install -y testdisk
-    apt install -y tmux
-    apt install -y tree
-    apt install -y typora # Markdown editor
+    apt install -y testdisk   #
+    apt install -y tmux       # Terminal multiplexer
+    apt install -y tree       # Prints file paths in tree format
+    apt install -y typora     # Markdown editor
     apt install -y ubuntu-restricted-extras
     #apt install -y vim
-    apt install -y vlc
+    apt install -y vlc        # Media player
+    apt install -y xsel       # Handles selected text in scripts
+    apt install -y zotero-standalone # Reference manager
 
 ## Remove things that may have been added that you don't want
 apt remove libreoffice-draw
@@ -123,18 +127,18 @@ apt remove libreoffice-draw
 
 # XCFE4 Panel Settings
 ## Set Panel Autohide Time
-    echo "style "xfce-panel-window-style"" >> "~/.gtkrc-2.0"
-    echo "{" >> "~/.gtkrc-2.0"
+    echo 'style "xfce-panel-window-style"'                     >> "~/.gtkrc-2.0"
+    echo "{"                                                   >> "~/.gtkrc-2.0"
     echo "  # Time in miliseconds before the panel will unhide on an enter event" \
-        >> "~/.gtkrc-2.0"
-    echo "  XfcePanelWindow::popup-delay = 1" >> "~/.gtkrc-2.0"
-    echo " " >> "~/.gtkrc-2.0"
+                                                               >> "~/.gtkrc-2.0"
+    echo "  XfcePanelWindow::popup-delay = 1"                  >> "~/.gtkrc-2.0"
+    echo " "                                                   >> "~/.gtkrc-2.0"
     echo "  # Time in miliseconds before the panel will hide on a leave event" \
-        >> "~/.gtkrc-2.0"
-    echo "  XfcePanelWindow::popdown-delay = 1" >> "~/.gtkrc-2.0"
-    echo "}" >> "~/.gtkrc-2.0"
-    echo "class "XfcePanelWindow" style "xfce-panel-window-style"" >> \
-        "~/.gtkrc-2.0"
+                                                               >> "~/.gtkrc-2.0"
+    echo "  XfcePanelWindow::popdown-delay = 1"                >> "~/.gtkrc-2.0"
+    echo "}"                                                   >> "~/.gtkrc-2.0"
+    echo 'class "XfcePanelWindow" style "xfce-panel-window-style"' \
+                                                               >> "~/.gtkrc-2.0"
 
 #########################################################################
 # UI Settings

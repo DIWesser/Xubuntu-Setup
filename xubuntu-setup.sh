@@ -81,6 +81,7 @@ apt update # Update repository and app lists
     apt install -y pandoc     # Document converter
     apt install -y paper-gtk-theme
     apt install -y paper-icon-theme
+    apt install -y pdfsandwich # OCR PDFs
     apt install -y ranger     # Command line file manager with Vim bindings
     apt install -y redshift   # 
     apt install -y screenfetch

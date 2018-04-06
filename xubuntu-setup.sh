@@ -86,6 +86,8 @@ apt update # Update repository and app lists
     apt install -y redshift   # 
     apt install -y screenfetch
     apt install -y testdisk   #
+    apt install -y tesseract-ocr     # OCR
+    apt install -y tesseract-ocr-all # Languages for Tesseract
     apt install -y tmux       # Terminal multiplexer
     apt install -y tree       # Prints file paths in tree format
     apt install -y typora     # Markdown editor

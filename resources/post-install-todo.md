@@ -11,3 +11,4 @@ There are still a few things the you need to do manually after running the start
 - [ ] Install [AESCrypt](https://www.aescrypt.com/download/)
 - [ ] ~~Install [jGRASP](http://spider.eng.auburn.edu/user-cgi/grasp/grasp.pl?;dl=download_jgrasp.html)~~ Actually, don't.
 - [ ] Walnut street printer set up based on [this Ubuntu forums thread](https://ubuntuforums.org/showthread.php?t=2350001).
+- [ ] Install Richochet

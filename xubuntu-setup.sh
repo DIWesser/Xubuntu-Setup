@@ -68,7 +68,9 @@ apt update # Update repository and app lists
     apt install -y keepassxc  # Password manager
     apt install -y krita      # Drawing app
     apt install -y libdvd-pkg
+    apt install -y libreoffice-calc
     apt install -y libreoffice-impress
+    apt install -y libreoffice-writer
     #apt install -y lsb-core   # Needed for jGRASP
     #apt install -y nautilus   # File manager that plays better with Dropbox.
     #                          # However, Thunar and Dropbox have been working
@@ -98,9 +100,6 @@ apt update # Update repository and app lists
     apt install -y vlc        # Media player
     apt install -y xsel       # Handles selected text in scripts
     apt install -y zotero-standalone # Reference manager
-
-## Remove things that may have been added that you don't want
-apt remove libreoffice-draw
 
 # Non-repo programs
 #    # Chrome

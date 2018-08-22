@@ -101,9 +101,6 @@ apt update # Update repository and app lists
     apt install -y xsel       # Handles selected text in scripts
     apt install -y zotero-standalone # Reference manager
 
-## Remove things that may have been added that you don't want
-apt remove libreoffice-draw
-
 # Non-repo programs
 #    # Chrome
 #        chmod +x resources/install-chrome.sh

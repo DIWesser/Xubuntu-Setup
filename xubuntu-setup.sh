@@ -36,12 +36,12 @@ timedatectl set-timezone Etc/UTC # Change timezone to UTC
        add-apt-repository -y 'deb https://typora.io ./linux/'
     #add-apt-repository -y ppa:elementary-os/stable  # Geary and Pantheon Files
     #add-apt-repository -y ppa:elementary-os/daily   # Pantheon Files Dropbox plugin
-    add-apt-repository -y ppa:flexiondotorg/albert   # Albert launcher
-    add-apt-repository -y ppa:snwh/pulp              # Paper GTK and icon themes
-    add-apt-repository -y ppa:neovim-ppa/stable      # Neovim
+#    add-apt-repository -y ppa:flexiondotorg/albert   # Albert launcher
+#    add-apt-repository -y ppa:snwh/pulp              # Paper GTK and icon themes
+#    add-apt-repository -y ppa:neovim-ppa/stable      # Neovim
     #add-apt-repository -y ppa:jeffreyratcliffe/ppa   # More up to date version of gscan2pdf (It's Grumpy though.)
-    add-apt-repository -y ppa:webupd8team/java       # Java 8 JDK installer
-    add-apt-repository -y ppa:phoerious/keepassxc    # KeePassXC
+#    add-apt-repository -y ppa:webupd8team/java       # Java 8 JDK installer
+#    add-apt-repository -y ppa:phoerious/keepassxc    # KeePassXC
 
 apt update # Update repository and app lists
 
@@ -55,7 +55,7 @@ apt update # Update repository and app lists
 
 ## Install apps
     apt install -y abcde      # CLI CD ripper
-    apt install -y albert     # Launcher simular to macOS's Spotlight
+    #apt install -y albert     # Launcher simular to macOS's Spotlight
     #apt install -y calibre    # Ebook manager (Repo version is outdated)
     apt install -y compton    # Display compositor. Fixes Xubuntu screen tearing
     #apt install -y eclipse    # IDE (Java, etc)
@@ -69,22 +69,24 @@ apt update # Update repository and app lists
     apt install -y krita      # Drawing app
     apt install -y libdvd-pkg
     apt install -y libreoffice-impress
-    apt install -y lsb-core   # Needed for jGRASP
+    #apt install -y lsb-core   # Needed for jGRASP
     #apt install -y nautilus   # File manager that plays better with Dropbox.
     #                          # However, Thunar and Dropbox have been working
-    apt install -y neovim     # CLI text editor
+    #apt install -y neovim     # CLI text editor
     apt install -y nmap
     #apt install -y npm
     apt install -y ntp        # Network Time Protocol
-    apt install -y oracle-java8-installer # Java 8 runtime and JDK
-    apt install -y oracle-java8-set-default
+    apt install -y okular     # PDF viewer/editor
+    #apt install -y oracle-java8-installer # Java 8 runtime and JDK
+    #apt install -y oracle-java8-set-default
     apt install -y pandoc     # Document converter
-    apt install -y paper-gtk-theme
-    apt install -y paper-icon-theme
+    #apt install -y paper-gtk-theme
+    #apt install -y paper-icon-theme
     apt install -y pdfsandwich # OCR PDFs
     apt install -y ranger     # Command line file manager with Vim bindings
     apt install -y redshift   # 
-    apt install -y screenfetch
+    apt install -y rofi       # Application launcher
+    #apt install -y screenfetch # System info
     apt install -y testdisk   #
     apt install -y tesseract-ocr     # OCR
     apt install -y tesseract-ocr-all # Languages for Tesseract
@@ -101,22 +103,22 @@ apt update # Update repository and app lists
 apt remove libreoffice-draw
 
 # Non-repo programs
-    # Chrome
-        chmod +x resources/install-chrome.sh
-        ./resources/install-chrome.sh
-    # Franz
-        chmod +x resources.install-franz.sh
-        ./resources.install-franz.sh
-    # Extra Typora Themes
-        chmod +x resources/install-typora-themes.sh
-        ./resources/install-typora-themes.sh
-    # surge.sh
-        npm install --global surge
+#    # Chrome
+#        chmod +x resources/install-chrome.sh
+#        ./resources/install-chrome.sh
+#    # Franz
+#        chmod +x resources.install-franz.sh
+#        ./resources.install-franz.sh
+#    # Extra Typora Themes
+#        chmod +x resources/install-typora-themes.sh
+#        ./resources/install-typora-themes.sh
+#    # surge.sh
+#        npm install --global surge
 
 # Printer Drivers
     # Canon MX470
-        chmod +x resources/canon-mx470-setup.sh
-        ./resources/canon-mx470-setup.sh
+#        chmod +x resources/canon-mx470-setup.sh
+#        ./resources/canon-mx470-setup.sh
 
 #########################################################################
 # Styling
@@ -125,22 +127,22 @@ apt remove libreoffice-draw
 # !!! Importing dotfiles would render most of this moot. !!!
 
 # Set theme
-    xfconf-query -c xsettings -p /Net/ThemeName -s "Numix"
-    xfconf-query -c xsettings -p /Net/IconThemeName -s "Paper"
+#    xfconf-query -c xsettings -p /Net/ThemeName -s "Numix"
+#    xfconf-query -c xsettings -p /Net/IconThemeName -s "Paper"
 
 # XCFE4 Panel Settings
 ## Set Panel Autohide Time
-    echo 'style "xfce-panel-window-style"'                     >> "~/.gtkrc-2.0"
-    echo "{"                                                   >> "~/.gtkrc-2.0"
-    echo "  # Time in miliseconds before the panel will unhide on an enter event" \
-                                                               >> "~/.gtkrc-2.0"
-    echo "  XfcePanelWindow::popup-delay = 1"                  >> "~/.gtkrc-2.0"
-    echo " "                                                   >> "~/.gtkrc-2.0"
-    echo "  # Time in miliseconds before the panel will hide on a leave event" \
-                                                               >> "~/.gtkrc-2.0"
-    echo "  XfcePanelWindow::popdown-delay = 1"                >> "~/.gtkrc-2.0"
-    echo "}"                                                   >> "~/.gtkrc-2.0"
-    echo 'class "XfcePanelWindow" style "xfce-panel-window-style"' \
+#    echo 'style "xfce-panel-window-style"'                     >> "~/.gtkrc-2.0"
+#    echo "{"                                                   >> "~/.gtkrc-2.0"
+#    echo "  # Time in miliseconds before the panel will unhide on an enter event" \
+#                                                               >> "~/.gtkrc-2.0"
+#    echo "  XfcePanelWindow::popup-delay = 1"                  >> "~/.gtkrc-2.0"
+#    echo " "                                                   >> "~/.gtkrc-2.0"
+#    echo "  # Time in miliseconds before the panel will hide on a leave event" \
+#                                                               >> "~/.gtkrc-2.0"
+#    echo "  XfcePanelWindow::popdown-delay = 1"                >> "~/.gtkrc-2.0"
+#    echo "}"                                                   >> "~/.gtkrc-2.0"
+#    echo 'class "XfcePanelWindow" style "xfce-panel-window-style"' \
                                                                >> "~/.gtkrc-2.0"
 
 #########################################################################
@@ -153,10 +155,10 @@ apt remove libreoffice-draw
     #synclient HorizScrollDelta=101
 
 # Require username to be entered at login
-    touch /etc/lightdm/lightdm.conf
-    echo '[SeatDefaults]' >> /etc/lightdm/lightdm.conf
+#    touch /etc/lightdm/lightdm.conf
+#    echo '[SeatDefaults]' >> /etc/lightdm/lightdm.conf
     #echo 'greeter-show-manual-login=true' >> /etc/lightdm/lightdm.conf
-    echo 'greeter-hide-users=true' >> /etc/lightdm/lightdm.conf
+#    echo 'greeter-hide-users=true' >> /etc/lightdm/lightdm.conf
 
 # Change default view in Nautilus file manager to "List View"
     gsettings set org.gnome.nautilus.preferences default-folder-viewer 'list-view'

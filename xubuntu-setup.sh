@@ -64,8 +64,10 @@ apt install -y calibre     # Ebook manager (Repo version is outdated)
 apt install -y chrome-gnome-shell # Gnome browser integration
 #apt install -y compton     # Display compositor. Fixes Xubuntu screen tearing
 #apt install -y eclipse     # IDE (Java, etc)
+apt install -y evolution   # Needed to sign into Gnome Calendar
 apt install -y festival    # Text to speach
 apt install -y git         # If you don't know what this is, don't install it.
+apt install -y gnome-calendar
 apt install -y gnome-disk-utility
 apt install -y gscan2pdf   # Scanning program with OCR. It's a bit grumpy.
 apt install -y htop        # CLI activity monitoring.
@@ -74,6 +76,7 @@ apt install -y keepassxc   # Password manager
 apt install -y krita       # Drawing app
 apt install -y libdvd-pkg
 apt install -y libreoffice-calc
+apt install -y libreoffice-gtx # Neede for GTK theme integration
 apt install -y libreoffice-impress
 apt install -y libreoffice-writer
 #apt install -y lsb-core    # Needed for jGRASP

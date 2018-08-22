@@ -1,4 +1,8 @@
 #!/bin/bash
+#
+# Todo:
+# - Make more generic
+# - Add ability to detect what distro and DE this is being run
 
 #Check if run as root
 if [ "$UID" -ne "0" ] ; then # Actual check
@@ -57,6 +61,7 @@ apt remove xfce4-notes
 apt install -y abcde       # CLI CD ripper
 #apt install -y albert      # Launcher simular to macOS's Spotlight
 apt install -y calibre     # Ebook manager (Repo version is outdated)
+apt install -y chrome-gnome-shell # Gnome browser integration
 #apt install -y compton     # Display compositor. Fixes Xubuntu screen tearing
 #apt install -y eclipse     # IDE (Java, etc)
 apt install -y festival    # Text to speach

@@ -163,6 +163,12 @@ apt remove libreoffice-draw
 # Change default view in Nautilus file manager to "List View"
     gsettings set org.gnome.nautilus.preferences default-folder-viewer 'list-view'
 
+# Use GTK theme with Qt apps
+apt install qt5-style-plugins
+echo "" >> ~/.profile
+echo "# Use GTK themes with Qt apps" >> ~/.profile
+echo "export QT_QPA_PLATFORMTHEME=gtk2" >> ~/.profile
+
 #########################################################################
 # Misc. Settings
 #########################################################################

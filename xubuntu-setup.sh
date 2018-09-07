@@ -16,6 +16,9 @@ fi
 
 cd Desktop # Send stray files to Desktop
 
+# Detect desktop environment
+de=gnome
+
 # Update everything before we begin
 apt update
 apt upgrade -y
@@ -46,6 +49,7 @@ timedatectl set-timezone Etc/UTC # Change timezone to UTC
     #add-apt-repository -y ppa:jeffreyratcliffe/ppa   # More up to date version of gscan2pdf (It's Grumpy though.)
 #    add-apt-repository -y ppa:webupd8team/java       # Java 8 JDK installer
 #    add-apt-repository -y ppa:phoerious/keepassxc    # KeePassXC
+#    add-apt-repository -y ppa:smathot/cogscinl       # Zotero
 
 apt update # Update repository and app lists
 
@@ -69,17 +73,18 @@ apt install -y festival    # Text to speach
 apt install -y git         # If you don't know what this is, don't install it.
 apt install -y gnome-calendar
 apt install -y gnome-disk-utility
-apt install -y gscan2pdf   # Scanning program with OCR. It's a bit grumpy.
+#apt install -y gscan2pdf   # Scanning program with OCR. It's a bit grumpy.
 apt install -y htop        # CLI activity monitoring.
-apt install -y inkscape    # Vector graphics editor
+#apt install -y inkscape    # Vector graphics editor
 apt install -y keepassxc   # Password manager
-apt install -y krita       # Drawing app
+#apt install -y krita       # Drawing app
 apt install -y libdvd-pkg
 apt install -y libreoffice-calc
 apt install -y libreoffice-gtx # Neede for GTK theme integration
 apt install -y libreoffice-impress
 apt install -y libreoffice-writer
 #apt install -y lsb-core    # Needed for jGRASP
+apt install -y mpv          # CLI media player
 #apt install -y nautilus    # File manager that plays better with Dropbox.
 #                           # However, Thunar and Dropbox have been working
 #apt install -y neovim      # CLI text editor
@@ -106,7 +111,7 @@ apt install -y typora      # Markdown editor
 apt install -y ubuntu-restricted-extras
 #apt install -y vim
 apt install -y vlc         # Media player
-apt install -y xsel        # Handles selected text in scripts
+apt install -y xsel        # Handles selected text in my scripts
 apt install -y zotero-standalone # Reference manager
 
 # Non-repo programs
@@ -160,6 +165,13 @@ apt install -y zotero-standalone # Reference manager
 # !!! Doesn't persist accross reboots !!!
     #synclient HorizTwoFingerScroll=1
     #synclient HorizScrollDelta=101
+
+# Disable natural scrolling
+if [[ de=gnome ]] ; then
+    gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll false
+else
+    echo "Scroll direction cannot be changed in your desktop environment."
+fi
 
 # Require username to be entered at login
 #    touch /etc/lightdm/lightdm.conf

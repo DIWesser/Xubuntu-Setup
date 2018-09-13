@@ -73,6 +73,7 @@ apt install -y festival    # Text to speach
 apt install -y git         # If you don't know what this is, don't install it.
 apt install -y gnome-calendar
 apt install -y gnome-disk-utility
+apt install -y gnome-shell-extensions # Makes Gnome work much better
 #apt install -y gscan2pdf   # Scanning program with OCR. It's a bit grumpy.
 apt install -y htop        # CLI activity monitoring.
 #apt install -y inkscape    # Vector graphics editor

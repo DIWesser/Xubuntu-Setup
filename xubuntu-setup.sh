@@ -116,6 +116,13 @@ apt install -y xsel        # Handles selected text in my scripts
 apt install -y zotero-standalone # Reference manager
 
 # Non-repo programs
+
+# youtube-dl
+# Repo version is slow to update.
+curl -L https://yt-dl.org/downloads/latest/youtube-dl -o \
+    /usr/local/bin/youtube-dl
+chmod a+rx /usr/local/bin/youtube-dl
+
 #    # Chrome
 #        chmod +x resources/install-chrome.sh
 #        ./resources/install-chrome.sh

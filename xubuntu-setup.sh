@@ -83,6 +83,7 @@ apt install -y libdvd-pkg
 apt install -y libreoffice-calc
 apt install -y libreoffice-gtk # Neede for GTK theme integration
 apt install -y libreoffice-impress
+apt install -y libreoffice-style-breeze
 apt install -y libreoffice-writer
 #apt install -y lsb-core    # Needed for jGRASP
 apt install -y mpv          # CLI media player

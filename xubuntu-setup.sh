@@ -192,6 +192,9 @@ fi
 # Change default view in Nautilus file manager to "List View"
 gsettings set org.gnome.nautilus.preferences default-folder-viewer 'list-view'
 
+# Show battery percentage in Gnome menu bar
+gsettings set org.gnome.desktop.interface show-battery-percentage true
+
 # Use GTK theme with Qt apps
 apt install qt5-style-plugins
 echo "" >> ~/.profile

@@ -113,7 +113,7 @@ apt install -y tmux        # Terminal multiplexer
 apt install -y tree        # Prints file paths in tree format
 apt install -y typora      # Markdown editor
 apt install -y ubuntu-restricted-extras
-apt install -y unoconv     # ODT, etc support for gnome-sushi
+apt install -y unoconv     # ODT, etc. support for gnome-sushi
 #apt install -y vim
 apt install -y vlc         # Media player
 apt install -y xsel        # Handles selected text in my scripts

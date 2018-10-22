@@ -167,7 +167,7 @@ chmod a+rx /usr/local/bin/youtube-dl
 #    echo "  XfcePanelWindow::popdown-delay = 1"                >> "~/.gtkrc-2.0"
 #    echo "}"                                                   >> "~/.gtkrc-2.0"
 #    echo 'class "XfcePanelWindow" style "xfce-panel-window-style"' \
-                                                               >> "~/.gtkrc-2.0"
+#                                                               >> "~/.gtkrc-2.0"
 
 #########################################################################
 # UI Settings

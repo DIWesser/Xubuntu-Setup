@@ -75,6 +75,7 @@ apt install -y gnome-calendar
 apt install -y gnome-disk-utility
 apt install -y gnome-dictionary
 apt install -y gnome-shell-extensions # Makes Gnome work much better
+apt install -y gnome-sushi # Quick Look for Nautilus
 #apt install -y gscan2pdf   # Scanning program with OCR. It's a bit grumpy.
 apt install -y htop        # CLI activity monitoring.
 #apt install -y inkscape    # Vector graphics editor
@@ -112,6 +113,7 @@ apt install -y tmux        # Terminal multiplexer
 apt install -y tree        # Prints file paths in tree format
 apt install -y typora      # Markdown editor
 apt install -y ubuntu-restricted-extras
+apt install -y unoconv     # ODT, etc support for gnome-sushi
 #apt install -y vim
 apt install -y vlc         # Media player
 apt install -y xsel        # Handles selected text in my scripts

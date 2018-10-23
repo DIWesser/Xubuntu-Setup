@@ -82,6 +82,7 @@ apt install -y htop        # CLI activity monitoring.
 apt install -y keepassxc   # Password manager
 #apt install -y krita       # Drawing app
 apt install -y libdvd-pkg
+apt install -y libcanaberra-gtk-module # Makes some unimportant console errors from Okular go away
 apt install -y libreoffice-calc
 apt install -y libreoffice-gtk # Neede for GTK theme integration
 apt install -y libreoffice-impress

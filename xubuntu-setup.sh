@@ -62,25 +62,25 @@ apt remove pidgin
 apt remove xfce4-notes
 
 # Install apps
-apt install -y abcde       # CLI CD ripper
-#apt install -y albert      # Launcher simular to macOS's Spotlight
-apt install -y calibre     # Ebook manager (Repo version is outdated)
+apt install -y abcde        # CLI CD ripper
+#apt install -y albert       # Launcher simular to macOS's Spotlight
+apt install -y calibre      # Ebook manager (Repo version is outdated)
 apt install -y chrome-gnome-shell # Gnome browser integration
-#apt install -y compton     # Display compositor. Fixes Xubuntu screen tearing
-#apt install -y eclipse     # IDE (Java, etc)
-apt install -y evolution   # Needed to sign into Gnome Calendar
-apt install -y festival    # Text to speach
-apt install -y git         # If you don't know what this is, don't install it.
+#apt install -y compton      # Display compositor. Fixes Xubuntu screen tearing
+#apt install -y eclipse      # IDE (Java, etc)
+apt install -y evolution    # Needed to sign into Gnome Calendar
+apt install -y festival     # Text to speach
+apt install -y git          # If you don't know what this is, don't install it.
 apt install -y gnome-calendar
 apt install -y gnome-disk-utility
 apt install -y gnome-dictionary
 apt install -y gnome-shell-extensions # Makes Gnome work much better
-apt install -y gnome-sushi # Quick Look for Nautilus
-#apt install -y gscan2pdf   # Scanning program with OCR. It's a bit grumpy.
-apt install -y htop        # CLI activity monitoring.
-#apt install -y inkscape    # Vector graphics editor
-apt install -y keepassxc   # Password manager
-#apt install -y krita       # Drawing app
+apt install -y gnome-sushi  # Quick Look for Nautilus
+#apt install -y gscan2pdf    # Scanning program with OCR. It's a bit grumpy.
+apt install -y htop         # CLI activity monitoring.
+#apt install -y inkscape     # Vector graphics editor
+apt install -y keepassxc    # Password manager
+#apt install -y krita        # Drawing app
 apt install -y libdvd-pkg
 apt install -y libcanaberra-gtk-module # Makes some unimportant console errors from Okular go away
 apt install -y libreoffice-calc
@@ -88,36 +88,38 @@ apt install -y libreoffice-gtk # Neede for GTK theme integration
 apt install -y libreoffice-impress
 apt install -y libreoffice-style-breeze
 apt install -y libreoffice-writer
-#apt install -y lsb-core    # Needed for jGRASP
+#apt install -y lsb-core     # Needed for jGRASP
 apt install -y mpv          # CLI media player
-#apt install -y nautilus    # File manager that plays better with Dropbox.
-#                           # However, Thunar and Dropbox have been working
-#apt install -y neovim      # CLI text editor
+#apt install -y nautilus     # File manager that plays better with Dropbox.
+#                            # However, Thunar and Dropbox have been working
+#apt install -y neovim       # CLI text editor
 apt install -y nmap
 #apt install -y npm
-apt install -y ntp         # Network Time Protocol
-apt install -y okular      # PDF viewer/editor
+apt install -y ntp          # Network Time Protocol
+apt install -y okular       # PDF viewer/editor
 #apt install -y oracle-java8-installer # Java 8 runtime and JDK
 #apt install -y oracle-java8-set-default
-apt install -y pandoc      # Document converter
+apt install -y pandoc       # Document converter
 #apt install -y paper-gtk-theme
 #apt install -y paper-icon-theme
-apt install -y pdfsandwich # OCR PDFs
-apt install -y ranger      # Command line file manager with Vim bindings
-apt install -y redshift    # 
-apt install -y rofi        # Application launcher
-#apt install -y screenfetch # System info
-apt install -y testdisk    #
+apt install -y pdfsandwich  # OCR PDFs
+apt install -y ranger       # Command line file manager with Vim bindings
+apt install -y redshift     # 
+apt install -y rofi         # Application launcher
+#apt install -y screenfetch  # System info
+apt install -y testdisk
 apt install -y tesseract-ocr     # OCR
 apt install -y tesseract-ocr-all # Languages for Tesseract
-apt install -y tmux        # Terminal multiplexer
-apt install -y tree        # Prints file paths in tree format
-apt install -y typora      # Markdown editor
+apt install -y tmux         # Terminal multiplexer
+apt install -y torbrowser-launcher # Essentially the TOR Browser
+apt install -y transmission # Torrent client
+apt install -y tree         # Prints file paths in tree format
+apt install -y typora       # Markdown editor
 apt install -y ubuntu-restricted-extras
-apt install -y unoconv     # ODT, etc. support for gnome-sushi
+apt install -y unoconv      # ODT, etc. support for gnome-sushi
 #apt install -y vim
-apt install -y vlc         # Media player
-apt install -y xsel        # Handles selected text in my scripts
+apt install -y vlc          # Media player
+apt install -y xsel         # Handles selected text in my scripts
 apt install -y zotero-standalone # Reference manager
 
 # Non-repo programs

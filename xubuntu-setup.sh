@@ -78,6 +78,7 @@ apt install -y gnome-shell-extensions # Makes Gnome work much better
 apt install -y gnome-sushi  # Quick Look for Nautilus
 #apt install -y gscan2pdf    # Scanning program with OCR. It's a bit grumpy.
 apt install -y htop         # CLI activity monitoring.
+apt install -y hunspell-en-ca # Dictionary for LibreOffice
 #apt install -y inkscape     # Vector graphics editor
 apt install -y keepassxc    # Password manager
 #apt install -y krita        # Drawing app

@@ -70,6 +70,8 @@ apt install -y chrome-gnome-shell # Gnome browser integration
 #apt install -y eclipse      # IDE (Java, etc)
 apt install -y evolution    # Needed to sign into Gnome Calendar
 apt install -y festival     # Text to speach
+apt install -y fonts-crosextra-carlito # Calibri replacement font
+apt install -y fonts-crosextra-caladea # Cambria replacement font
 apt install -y git          # If you don't know what this is, don't install it.
 apt install -y gnome-calendar
 apt install -y gnome-disk-utility

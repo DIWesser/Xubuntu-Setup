@@ -1,1 +1,1 @@
-# Xubuntu-Setup
+# xubuntu-setup
